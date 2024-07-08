@@ -90,10 +90,28 @@ picture {
   /* justify-content: center; */
   align-items: center;
 
+  gap: 1.25rem;
+  background-color: var(--white);
   bottom: -7.5rem;
   left: 7.5rem;
 }
+.info-stat {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  gap: 0.2rem;
+}
+.info-stat > h2 {
+  font-size: 0.6rem;
+  letter-spacing: 0.1rem;
+  color: var(--Dark-Gray);
+}
 
+.info-stat > p {
+  color: var(--Very-Dark-Gray);
+  font-size: 1.25rem;
+}
 #map {
   height: 100%;
 
