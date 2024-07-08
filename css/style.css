@@ -8,7 +8,8 @@ body {
 main {
   height: 100%;
   display: grid;
-  height: max-content;
+  grid-template-rows: max-content 1fr;
+  /* height: max-content; */
 }
 
 .ip-container {
@@ -47,8 +48,11 @@ picture {
   bottom: -7.5rem;
   left: 7.5rem;
 }
+.map-container {
+}
 #map {
-  height: 32rem;
+  height: 100%;
+
   z-index: 0;
 }
 @media (min-width: 30rem) {
