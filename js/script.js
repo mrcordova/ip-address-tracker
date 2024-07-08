@@ -1,4 +1,7 @@
-let map = L.map("map").setView([51.505, -0.09], 13);
+let map = L.map("map", {
+  zoomControl: false,
+  attributionControl: false,
+}).setView([51.505, -0.09], 13);
 
 let icon = L.icon({
   iconUrl: "../images/icon-location.svg",
