@@ -7,14 +7,41 @@ body {
 
 main {
   height: 100%;
+  display: grid;
+  /* height: max-content; */
+}
+
+.test {
+  grid-row: 1;
+  grid-column: 1 / -1;
+}
+
+picture {
+  grid-row: 1;
+  grid-column: 1 / -1;
+}
+
+.bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .top-container {
-  background: center / cover no-repeat url("../images/pattern-bg-mobile.png");
+  display: grid;
+  position: relative;
+  height: fit-content;
+  /* background: center / cover no-repeat url("../images/pattern-bg-mobile.png"); */
 }
-
+.info-container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 @media (min-width: 30rem) {
   .top-container {
-    background: center / cover no-repeat url("../images/pattern-bg-desktop.png");
+    /* background: center / cover no-repeat url("../images/pattern-bg-desktop.png"); */
   }
 }

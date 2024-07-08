@@ -31,20 +31,28 @@
   <body>
     <main>
       <div class="top-container">
-        <h1>IP Address Tracker</h1>
-        <div>
-          <input
-            type="text"
-            name="search"
-            id="search"
-            placeholder="Search for any IP address or domain " />
-          <button>
-            <img
-              src="./images/icon-arrow.svg"
-              alt="arrow pointing to the right" />
-          </button>
+        <picture>
+          <source
+            media="(min-width: 30rem )"
+            srcset="./images/pattern-bg-desktop.png" />
+          <img class="bg-img" src="./images/pattern-bg-mobile.png" alt="" />
+        </picture>
+        <div class="test">
+          <h1>IP Address Tracker</h1>
+          <div>
+            <input
+              type="text"
+              name="search"
+              id="search"
+              placeholder="Search for any IP address or domain " />
+            <button>
+              <img
+                src="./images/icon-arrow.svg"
+                alt="arrow pointing to the right" />
+            </button>
+          </div>
         </div>
-        <div>
+        <div class="info-container">
           <div>
             <h2>IP Address</h2>
             <p>192.212.174.101</p>
