@@ -1,3 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+.rubik-400 {
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.rubik-500 {
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+.rubik-700 {
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+:root {
+  --Very-Dark-Gray: hsl(0, 0%, 17%);
+  --Dark-Gray: hsl(0, 0%, 59%);
+
+  --white: hsl(0, 0%, 100%);
+}
 body {
   height: 100vh;
   height: 100svh;
@@ -18,6 +44,14 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  padding-block-start: 1.5rem;
+  gap: 2.5rem;
+}
+
+.ip-container > h1 {
+  font-size: 1.53rem;
+  color: var(--white);
 }
 
 picture {
@@ -48,13 +82,13 @@ picture {
   bottom: -7.5rem;
   left: 7.5rem;
 }
-.map-container {
-}
+
 #map {
   height: 100%;
 
   z-index: 0;
 }
+
 @media (min-width: 30rem) {
   .top-container {
     /* background: center / cover no-repeat url("../images/pattern-bg-desktop.png"); */
