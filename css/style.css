@@ -23,6 +23,8 @@
   --Dark-Gray: hsl(0, 0%, 59%);
 
   --white: hsl(0, 0%, 100%);
+
+  --black: hsl(0, 0%, 0%);
 }
 body {
   height: 100vh;
@@ -37,7 +39,16 @@ main {
   grid-template-rows: max-content 1fr;
   /* height: max-content; */
 }
-
+input {
+  all: unset;
+  background-color: var(--white);
+  border-radius: 1rem 0 0 1rem;
+  padding-inline-end: 5rem;
+  text-indent: 1.5rem;
+}
+input:hover {
+  cursor: pointer;
+}
 .ip-container {
   grid-row: 1;
   grid-column: 1 / -1;
@@ -46,7 +57,7 @@ main {
   align-items: center;
 
   padding-block-start: 1.5rem;
-  gap: 2.5rem;
+  gap: 1.5rem;
 }
 
 .ip-container > h1 {
@@ -87,6 +98,20 @@ picture {
   height: 100%;
 
   z-index: 0;
+}
+.search-bar {
+  display: flex;
+}
+.search-btn {
+  background-color: var(--black);
+
+  border-radius: 0 1rem 1rem 0;
+  padding-inline: 1.45rem;
+  padding-block: 1.4rem;
+}
+
+.search-btn:hover {
+  cursor: pointer;
 }
 
 @media (min-width: 30rem) {
