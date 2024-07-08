@@ -8,12 +8,15 @@ body {
 main {
   height: 100%;
   display: grid;
-  /* height: max-content; */
+  height: max-content;
 }
 
-.test {
+.ip-container {
   grid-row: 1;
   grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 picture {
@@ -39,6 +42,9 @@ picture {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  bottom: -7.5rem;
+  left: 7.5rem;
 }
 @media (min-width: 30rem) {
   .top-container {
