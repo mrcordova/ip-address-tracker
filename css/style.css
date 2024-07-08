@@ -45,7 +45,7 @@ input {
   border-radius: 1rem 0 0 1rem;
 
   /* Mobile */
-  /* padding-inline-end: 5rem; */
+  /* width: 16.8rem; */
   /* text-indent: 1.5rem; */
   /* Desktop */
   width: 31rem;
@@ -105,12 +105,18 @@ picture {
   /* justify-content: center; */
   align-items: center;
   transition: 0.5s ease;
-  gap: 1.25rem;
   border-radius: 1rem;
 
-  bottom: -10.2rem;
-  left: 1.5rem;
-
+  /* Mobile */
+  /* gap: 1.25rem; */
+  /* bottom: -10.2rem; */
+  /* left: 1.5rem; */
+  /* padding-inline: 4.4rem; */
+  /* padding-block: 1.5rem 1.3rem; */
+  /* Desktop */
+  gap: 1.25rem;
+  bottom: -2rem;
+  left: 10rem;
   padding-inline: 4.4rem;
   padding-block: 1.5rem 1.3rem;
 }
@@ -121,6 +127,11 @@ picture {
   align-items: center;
   gap: 0.2rem;
 }
+
+.info-stat {
+  border-right: 0;
+}
+
 .info-stat > h2 {
   font-size: 0.6rem;
   letter-spacing: 0.1rem;
@@ -158,6 +169,15 @@ picture {
 @media (min-width: 30rem) {
   .info-container {
     flex-direction: row;
+  }
+
+  .info-stat {
+    align-items: flex-start;
+    border-right: 1px solid var(--Dark-Gray);
+  }
+
+  .info-stat:last-child {
+    border-right: 0;
   }
   .top-container {
     /* background: center / cover no-repeat url("../images/pattern-bg-desktop.png"); */
