@@ -83,17 +83,21 @@ picture {
   /* background: center / cover no-repeat url("../images/pattern-bg-mobile.png"); */
 }
 .info-container {
+  background-color: var(--white);
   z-index: 20;
   position: absolute;
   display: flex;
   flex-direction: column;
   /* justify-content: center; */
   align-items: center;
-
   gap: 1.25rem;
-  background-color: var(--white);
-  bottom: -7.5rem;
-  left: 7.5rem;
+  border-radius: 1rem;
+
+  bottom: -12rem;
+  left: 2rem;
+
+  padding-inline: 4.4rem;
+  padding-block: 1.5rem 1.3rem;
 }
 .info-stat {
   display: flex;
