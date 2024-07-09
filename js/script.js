@@ -6,8 +6,8 @@ let map = L.map("map", {
   attributionControl: false,
 }).setView([51.505, -0.09], 13);
 
-// const IP_API_KEY = "at_8ZsTEBLk0rIwuEVytt8BN4osGzwUQ";
-const tet = ${{ secrets.IP_API_KEY }}
+const IP_API_KEY = "at_8ZsTEBLk0rIwuEVytt8BN4osGzwUQ";
+
 const geoIpify = "https://geo.ipify.org/api/v2/country,city?";
 console.log(tet);
 let icon = L.icon({
@@ -101,7 +101,7 @@ function abbrState(input, to) {
 
 const updateLocation = async () => {
   const response = await fetch(
-    `${geoIpify}apiKey=${tet}&ipAddress=${input.value}&domain=${input.value}`
+    `${geoIpify}apiKey=${IP_API_KEY}&ipAddress=${input.value}&domain=${input.value}`
   );
 
   const {
