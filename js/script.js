@@ -6,9 +6,10 @@ let map = L.map("map", {
   attributionControl: false,
 }).setView([51.505, -0.09], 13);
 
-const IP_API_KEY = "at_8ZsTEBLk0rIwuEVytt8BN4osGzwUQ";
+// const IP_API_KEY = "at_8ZsTEBLk0rIwuEVytt8BN4osGzwUQ";
+const tet = ${{ secrets.IP_API_KEY }}
 const geoIpify = "https://geo.ipify.org/api/v2/country,city?";
-
+console.log(tet);
 let icon = L.icon({
   iconUrl: "../images/icon-location.svg",
   iconSize: [46, 56], // size of the icon
@@ -97,9 +98,10 @@ function abbrState(input, to) {
     }
   }
 }
-searchBtn.addEventListener("click", async (e) => {
+
+const updateLocation = async () => {
   const response = await fetch(
-    `${geoIpify}apiKey=${IP_API_KEY}&ipAddress=${input.value}&domain=${input.value}`
+    `${geoIpify}apiKey=${tet}&ipAddress=${input.value}&domain=${input.value}`
   );
 
   const {
@@ -114,9 +116,9 @@ searchBtn.addEventListener("click", async (e) => {
     region,
     "abbr"
   )} ${postalCode}`;
+
   timezoneEl.children[1].textContent = `UTC ${timezone}`;
-  //   console.log(isp, isp.slice(0, isp.indexOf("(")));
-  //   console.log(isp.indexOf("(") != -1 ? isp.indexOf("(") : isp.length + 1);
+
   ispEle.children[1].textContent = `${
     isp.slice(0, isp.indexOf("(") != -1 ? isp.indexOf("(") : isp.length + 1) ||
     "N/A"
@@ -125,4 +127,6 @@ searchBtn.addEventListener("click", async (e) => {
   map.panTo({ lat, lng });
 
   marker.setLatLng({ lat, lng });
-});
+};
+window.addEventListener("load", updateLocation);
+searchBtn.addEventListener("click", updateLocation);
