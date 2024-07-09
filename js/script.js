@@ -11,7 +11,7 @@ const IP_API_KEY = "at_8ZsTEBLk0rIwuEVytt8BN4osGzwUQ";
 const geoIpify = "https://geo.ipify.org/api/v2/country,city?";
 
 let icon = L.icon({
-  iconUrl: "../images/icon-location.svg",
+  iconUrl: "./images/icon-location.svg",
   iconSize: [46, 56], // size of the icon
 
   iconAnchor: [26, 55], // point of the icon which will correspond to marker's location
