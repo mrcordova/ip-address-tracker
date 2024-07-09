@@ -115,7 +115,12 @@ searchBtn.addEventListener("click", async (e) => {
     "abbr"
   )} ${postalCode}`;
   timezoneEl.children[1].textContent = `UTC ${timezone}`;
-  ispEle.children[1].textContent = `${isp.slice(0, isp.indexOf("(")) || "N/A"}`;
+  //   console.log(isp, isp.slice(0, isp.indexOf("(")));
+  //   console.log(isp.indexOf("(") != -1 ? isp.indexOf("(") : isp.length + 1);
+  ispEle.children[1].textContent = `${
+    isp.slice(0, isp.indexOf("(") != -1 ? isp.indexOf("(") : isp.length + 1) ||
+    "N/A"
+  }`;
 
   map.panTo({ lat, lng });
 
