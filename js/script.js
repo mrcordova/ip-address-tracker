@@ -23,7 +23,8 @@ L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
     '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
 }).addTo(map);
 
-L.marker([51.5, -0.09], { icon }).addTo(map);
+const marker = L.marker([51.5, -0.09], { icon });
+marker.addTo(map);
 function abbrState(input, to) {
   var states = [
     ["Arizona", "AZ"],
@@ -115,4 +116,8 @@ searchBtn.addEventListener("click", async (e) => {
   )} ${postalCode}`;
   timezoneEl.children[1].textContent = `UTC ${timezone}`;
   ispEle.children[1].textContent = `${isp.slice(0, isp.indexOf("(")) || "N/A"}`;
+
+  map.panTo({ lat, lng });
+
+  marker.setLatLng({ lat, lng });
 });
