@@ -9,7 +9,7 @@ let map = L.map("map", {
 const IP_API_KEY = "at_8ZsTEBLk0rIwuEVytt8BN4osGzwUQ";
 
 const geoIpify = "https://geo.ipify.org/api/v2/country,city?";
-console.log(tet);
+
 let icon = L.icon({
   iconUrl: "../images/icon-location.svg",
   iconSize: [46, 56], // size of the icon
